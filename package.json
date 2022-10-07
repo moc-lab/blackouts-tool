@@ -1,0 +1,12 @@
+{
+  "name": "blackoutCheck",
+  "version": "0.0.1",
+  "description": "Blackout check for TSN live streams",
+  "main": "index.js",
+  "repository": "https://github.com/teban004/blackoutCheck.git",
+  "author": "Esteban Arrangoiz <esteban.arrangoiz@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4"
+  }
+}
