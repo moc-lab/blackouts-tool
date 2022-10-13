@@ -1,5 +1,3 @@
-/* custom scripts go here */
-
 (function()
 {
 
@@ -88,7 +86,7 @@
 							} else {
 								result.className = "alert alert-success";
 								messageTxt += "NOT blacked out in your region.</p>";
-								messageTxt += messageTxt3
+								messageTxt += messageTxt3;
 							}
 							break;
 						case "canadiens":
@@ -99,6 +97,7 @@
 							} else {
 								result.className = "alert alert-success";
 								messageTxt += "NOT blacked out in your region.</p>";
+								messageTxt += messageTxt3;
 							}
 							break;
 						case "senators":
@@ -109,6 +108,7 @@
 							} else {
 								result.className = "alert alert-success";
 								messageTxt += "NOT blacked out in your region.</p>";
+								messageTxt += messageTxt3;
 							}
 							break;
 						case "jets":
@@ -119,6 +119,7 @@
 							} else {
 								result.className = "alert alert-success";
 								messageTxt += "NOT blacked out in your region.</p>";
+								messageTxt += messageTxt3;
 							}
 							break;
 					}
