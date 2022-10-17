@@ -1,3 +1,5 @@
+/* custom scripts go here */
+
 (function()
 {
 
@@ -74,52 +76,52 @@
 			else {
 				if ( validZipCode(zipCode) ) {
 					messageTxt = "<p>For the postal code: <b>" + zipCode + "</b></p><p>The <b>" + team + "</b> games are ";
-					messageBlack = "<b>Why is the " + team + " game blacked out on TSN in my area?</b><br><br> As TSN owns regional broadcast rights to a package of Winnipeg Jets, Toronto Maple Leafs, Ottawa Senators, and Montreal Canadiens games, we can only broadcast games in the teams’ respective broadcast regions as determined by the NHL."
-					messageTxt3 = "If the customer is still not able to view this game;<br>- Get the customer's public ip address (http:whatismyip.com)<br>- Make sure the 'My IP Location' matches the postal code<br>- If ip location does not match, ask customer to check with their ISP provider<br>- Check with the customer's provider if the registered postal code is correct<br>- Escalate to L2 stating time and date of the game<br>- For L2 agents, check in Axis if the correct blackout contraints is applied to this particular game";
+					messageBlocked = "<b>Why is the " + team + " game blacked out on TSN in my area?</b><br><br> As TSN owns regional broadcast rights to a package of Winnipeg Jets, Toronto Maple Leafs, Ottawa Senators, and Montreal Canadiens games, we can only broadcast games in the teams’ respective broadcast regions as determined by the NHL."
+					messageTS = "If the customer is still not able to view this game;<br>&nbsp;&nbsp;&nbsp;&nbsp- Get the customer's public ip address (http:whatismyip.com)<br>&nbsp;&nbsp;&nbsp;&nbsp- Make sure the 'My IP Location' matches the postal code<br>&nbsp;&nbsp;&nbsp;&nbsp- If 'My IP Location' does not match, ask the customer to restart their ISP router to renew their public IP address<br>&nbsp;&nbsp;&nbsp;&nbsp- If 'My IP Location' still does not match, ask customer to check with their ISP provider<br>&nbsp;&nbsp;&nbsp;&nbsp- Check with the customer's provider if the registered postal code is correct<br>&nbsp;&nbsp;&nbsp;&nbsp- Escalate to L2 stating time and date of the game<br>&nbsp;&nbsp;&nbsp;&nbsp- For L2 agents, check in Axis if the correct blackout constraint is applied to this particular game";
 					// check the blackout constraint according to the selected team
 					switch( team ) {
 						case "leafs":
 							if ( codesLeafs.includes(zipCode)) {
 								result.className = "alert alert-warning";
 								messageTxt += "blacked out in your region.</p>";
-								messageTxt += messageBlack;
+								messageTxt += messageBlocked;
 							} else {
 								result.className = "alert alert-success";
 								messageTxt += "NOT blacked out in your region.</p>";
-								messageTxt += messageTxt3;
+								messageTxt += messageTS;
 							}
 							break;
 						case "canadiens":
 							if ( codesCanadiens.includes(zipCode)) {
 								result.className = "alert alert-warning";
 								messageTxt += "blacked out in your region.</p>";
-								messageTxt += messageBlack;
+								messageTxt += messageBlocked;
 							} else {
 								result.className = "alert alert-success";
 								messageTxt += "NOT blacked out in your region.</p>";
-								messageTxt += messageTxt3;
+								messageTxt += messageTS;
 							}
 							break;
 						case "senators":
 							if ( codesSenators.includes(zipCode)) {
 								result.className = "alert alert-warning";
 								messageTxt += "blacked out in your region.</p>";
-								messageTxt += messageBlack;
+								messageTxt += messageBlocked;
 							} else {
 								result.className = "alert alert-success";
 								messageTxt += "NOT blacked out in your region.</p>";
-								messageTxt += messageTxt3;
+								messageTxt += messageTS;
 							}
 							break;
 						case "jets":
 							if ( codesJets.includes(zipCode)) {
 								result.className = "alert alert-warning";
 								messageTxt += "blacked out in your region.</p>";
-								messageTxt += messageBlack
+								messageTxt += messageBlocked
 							} else {
 								result.className = "alert alert-success";
 								messageTxt += "NOT blacked out in your region.</p>";
-								messageTxt += messageTxt3;
+								messageTxt += messageTS;
 							}
 							break;
 					}
